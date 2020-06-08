@@ -26,19 +26,21 @@ public class EmployeeRepository {
 	public void insert(Employee employee) {
 		em.persist(employee);
 	}
-	
-	public List<Employee> retrieveEmployee(){
-		return em.createQuery("select e from Employee e", Employee.class).getResultList();
-	}
-	
-	
 
-	/* public List<PartTimeEmployee> retrieveAllPartTimeEmployees() {
-		
+	/*
+	 * This will not worked when @MappedSuperClass is used on employee because,
+	 * employee is no longer an entity and it cannot perform a query on employee
+	 *  
+	 * public List<Employee> retrieveEmployee(){ return
+	 * em.createQuery("select e from Employee e", Employee.class).getResultList(); }
+	 */
+
+	public List<PartTimeEmployee> retrieveAllPartTimeEmployees() {
+		return em.createQuery("select e from PartTimeEmployee e", PartTimeEmployee.class).getResultList();
 	}
 
 	public List<FullTimeEmployee> retrieveAllFullTimeEmployees() {
-
-	} */
+		return em.createQuery("select e from FullTimeEmployee e", FullTimeEmployee.class).getResultList();
+	}
 
 }
