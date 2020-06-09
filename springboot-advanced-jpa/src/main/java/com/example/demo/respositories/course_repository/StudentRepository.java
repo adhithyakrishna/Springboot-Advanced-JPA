@@ -1,4 +1,4 @@
-package com.example.demo.respository;
+package com.example.demo.respositories.course_repository;
 
 import javax.persistence.EntityManager;
 
@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.Course;
-import com.example.demo.entity.Passport;
-import com.example.demo.entity.Student;
+import com.example.demo.entity.course_entity.Course;
+import com.example.demo.entity.course_entity.Passport;
+import com.example.demo.entity.course_entity.Student;
 
 
 @Repository

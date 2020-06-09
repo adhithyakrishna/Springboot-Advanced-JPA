@@ -13,42 +13,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.demo.entity.Course;
-import com.example.demo.entity.Student;
+import com.example.demo.entity.course_entity.Course;
+import com.example.demo.entity.course_entity.Student;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = AdvancedJpaApplication.class)
-public class JPQLTest {
+public class TypedQueryJPQLTest {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	EntityManager em;
-
-	@Test
-	public void jpql_basic() {
-		Query query = em.createNamedQuery("query_get_all_courses");
-		List resultList = query.getResultList();
-		logger.info("Select  c  From Course c -> {}", resultList);
-	}
-
-	@Test
-	public void jpql_typed() {
-		TypedQuery<Course> query = em.createNamedQuery("query_get_all_courses", Course.class);
-
-		List<Course> resultList = query.getResultList();
-
-		logger.info("Select  c  From Course c -> {}", resultList);
-	}
-
-	@Test
-	public void jpql_where() {
-		TypedQuery<Course> query = em.createNamedQuery("query_get_100_Step_courses", Course.class);
-
-		List<Course> resultList = query.getResultList();
-
-		logger.info("Select  c  From Course c where name like '%100 Steps'-> {}", resultList);
-	}
 
 	@Test
 	public void jpql_courses_without_students() {

@@ -1,4 +1,4 @@
-package com.example.demo.respository;
+package com.example.demo.respositories.employee_repository;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.Employee;
-import com.example.demo.entity.FullTimeEmployee;
-import com.example.demo.entity.PartTimeEmployee;
+import com.example.demo.entity.employee_entity.Employee;
+import com.example.demo.entity.employee_entity.FullTimeEmployee;
+import com.example.demo.entity.employee_entity.PartTimeEmployee;
 
 @Repository
 @Transactional
@@ -28,11 +28,9 @@ public class EmployeeRepository {
 	}
 
 	/*
-	 * This will not worked when @MappedSuperClass is used on employee because,
-	 * employee is no longer an entity and it cannot perform a query on employee
-	 *  
-	 * public List<Employee> retrieveEmployee(){ return
-	 * em.createQuery("select e from Employee e", Employee.class).getResultList(); }
+	 * Since MappedSuperClass is used, no table would be created for Employee superclass,
+	 * there would be induvidual tables created for parttimeemployee and fulltimeemployee
+	 * hence they can be directly accessued using the queries like below
 	 */
 
 	public List<PartTimeEmployee> retrieveAllPartTimeEmployees() {

@@ -9,9 +9,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.entity.FullTimeEmployee;
-import com.example.demo.entity.PartTimeEmployee;
-import com.example.demo.respository.EmployeeRepository;
+import com.example.demo.entity.employee_entity.FullTimeEmployee;
+import com.example.demo.entity.employee_entity.PartTimeEmployee;
+import com.example.demo.entity.vehicle_entity.Bike;
+import com.example.demo.entity.vehicle_entity.Car;
+import com.example.demo.entity.vehicle_entity.Vehicle;
+import com.example.demo.respositories.employee_repository.EmployeeRepository;
+import com.example.demo.respositories.vehicle_repository.VehicleRepository;
 
 @SpringBootApplication
 public class AdvancedJpaApplication implements CommandLineRunner {
@@ -21,23 +25,21 @@ public class AdvancedJpaApplication implements CommandLineRunner {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
+	@Autowired
+	private VehicleRepository vehicleRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(AdvancedJpaApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
 
-		PartTimeEmployee partTime = new PartTimeEmployee("jill", new BigDecimal("50"));
-		FullTimeEmployee fullTime = new FullTimeEmployee("jack", new BigDecimal("10000"));
-		employeeRepository.insert(partTime);
-		employeeRepository.insert(fullTime);
+		vehicleRepository.insert(new Bike(150, "Avengers"));
+		vehicleRepository.insert(new Car(5000, "Lamborghini"));
 
-		logger.info("all employees {}", employeeRepository.retrieveAllFullTimeEmployees());
-		logger.info("all employees {}", employeeRepository.retrieveAllPartTimeEmployees());
-		
-//		logger.info("all employees {}", employeeRepository.retrieveEmployee());
+		employeeRepository.insert(new FullTimeEmployee("John", new BigDecimal(123)));
+		employeeRepository.insert(new PartTimeEmployee("Kumar", new BigDecimal(20)));
 	}
 
 }
