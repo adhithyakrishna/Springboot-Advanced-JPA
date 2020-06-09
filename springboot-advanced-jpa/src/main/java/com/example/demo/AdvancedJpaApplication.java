@@ -9,11 +9,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.demo.entity.employee_entity.FullTimeEmployee;
-import com.example.demo.entity.employee_entity.PartTimeEmployee;
-import com.example.demo.entity.vehicle_entity.Bike;
-import com.example.demo.entity.vehicle_entity.Car;
-import com.example.demo.entity.vehicle_entity.Vehicle;
+import com.example.demo.entities.employee_entity.FullTimeEmployee;
+import com.example.demo.entities.employee_entity.PartTimeEmployee;
+import com.example.demo.entities.vehicle_entity.Bike;
+import com.example.demo.entities.vehicle_entity.Car;
+import com.example.demo.entities.vehicle_entity.Vehicle;
 import com.example.demo.respositories.employee_repository.EmployeeRepository;
 import com.example.demo.respositories.vehicle_repository.VehicleRepository;
 

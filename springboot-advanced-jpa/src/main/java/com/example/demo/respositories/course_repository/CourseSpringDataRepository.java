@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.example.demo.entity.course_entity.Course;
+import com.example.demo.entities.course_entity.Course;
 
 /*
  * Spring data repository provides options for paginations as well as crud repositories

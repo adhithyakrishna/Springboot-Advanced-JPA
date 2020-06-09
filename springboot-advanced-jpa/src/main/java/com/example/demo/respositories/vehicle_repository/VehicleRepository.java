@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.vehicle_entity.Vehicle;
+import com.example.demo.entities.vehicle_entity.Vehicle;
 
 @Repository
 @Transactional

@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.demo.entity.vehicle_entity.Bike;
-import com.example.demo.entity.vehicle_entity.Vehicle;
+import com.example.demo.entities.vehicle_entity.Bike;
+import com.example.demo.entities.vehicle_entity.Vehicle;
 import com.example.demo.respositories.vehicle_repository.VehicleRepository;
 
 @RunWith(SpringRunner.class)

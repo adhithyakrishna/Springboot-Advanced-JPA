@@ -12,8 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.course_entity.Passport;
-import com.example.demo.entity.course_entity.Student;
+import com.example.demo.entities.course_entity.Passport;
+import com.example.demo.entities.course_entity.Student;
 import com.example.demo.respositories.course_repository.StudentRepository;
 
 @RunWith(SpringRunner.class)

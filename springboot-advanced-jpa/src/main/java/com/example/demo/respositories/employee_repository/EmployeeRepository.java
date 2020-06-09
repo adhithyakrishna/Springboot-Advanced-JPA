@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.employee_entity.Employee;
-import com.example.demo.entity.employee_entity.FullTimeEmployee;
-import com.example.demo.entity.employee_entity.PartTimeEmployee;
+import com.example.demo.entities.employee_entity.Employee;
+import com.example.demo.entities.employee_entity.FullTimeEmployee;
+import com.example.demo.entities.employee_entity.PartTimeEmployee;
 
 @Repository
 @Transactional

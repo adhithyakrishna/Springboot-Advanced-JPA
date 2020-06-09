@@ -1,4 +1,4 @@
-package com.example.demo.entity.course_entity;
+package com.example.demo.entities.course_entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -17,7 +17,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.demo.entity.course_entity.Course;
+import com.example.demo.entities.course_entity.Course;
 import com.example.demo.respositories.course_repository.CourseSpringDataRepository;
 
 @RunWith(SpringRunner.class)

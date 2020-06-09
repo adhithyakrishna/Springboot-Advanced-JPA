@@ -9,9 +9,9 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.course_entity.Course;
-import com.example.demo.entity.course_entity.Passport;
-import com.example.demo.entity.course_entity.Student;
+import com.example.demo.entities.course_entity.Course;
+import com.example.demo.entities.course_entity.Passport;
+import com.example.demo.entities.course_entity.Student;
 
 
 @Repository

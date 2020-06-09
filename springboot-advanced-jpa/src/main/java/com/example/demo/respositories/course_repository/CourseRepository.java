@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.example.demo.entity.course_entity.Course;
-import com.example.demo.entity.course_entity.Review;
+import com.example.demo.entities.course_entity.Course;
+import com.example.demo.entities.course_entity.Review;
 
 //Repository is used to communicate with entity manager class
 @Repository

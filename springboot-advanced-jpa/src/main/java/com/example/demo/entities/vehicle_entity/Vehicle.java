@@ -1,4 +1,4 @@
-package com.example.demo.entity.vehicle_entity;
+package com.example.demo.entities.vehicle_entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
