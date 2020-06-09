@@ -100,6 +100,7 @@ public class Course {
 	 * now Students is the owning side of the many to many relationship
 	 */
 	@ManyToMany(mappedBy = "courses")
+	@JsonIgnore	
 	private List<Student> students = new ArrayList<>(); 
 	
 	public List<Student> getStudents() {

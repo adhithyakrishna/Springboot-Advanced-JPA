@@ -4,6 +4,16 @@ insert into course(id, name, created_date, last_updated_date)
 values(10002,'Spring in 50 Steps', sysdate(), sysdate());
 insert into course(id, name, created_date, last_updated_date) 
 values(10003,'Spring Boot in 100 Steps', sysdate(), sysdate());
+insert into course(id, name, created_date, last_updated_date) 
+values(10004,'Spring Boot in 1 Steps', sysdate(), sysdate());
+insert into course(id, name, created_date, last_updated_date) 
+values(10005,'Spring Boot in 2 Steps', sysdate(), sysdate());
+insert into course(id, name, created_date, last_updated_date) 
+values(10006,'Spring Boot in 3 Steps', sysdate(), sysdate());
+insert into course(id, name, created_date, last_updated_date) 
+values(10007,'Spring Boot in 4 Steps', sysdate(), sysdate());
+insert into course(id, name, created_date, last_updated_date) 
+values(10008,'Spring Boot in 5 Steps', sysdate(), sysdate());
 
 insert into passport(id,number)
 values(40001,'E123456');
