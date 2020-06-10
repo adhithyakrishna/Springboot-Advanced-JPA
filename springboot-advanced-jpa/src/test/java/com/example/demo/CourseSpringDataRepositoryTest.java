@@ -1,8 +1,10 @@
 package com.example.demo;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.Test;
@@ -16,6 +18,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.entities.course_entity.Course;
 import com.example.demo.respositories.course_repository.CourseSpringDataRepository;
@@ -39,6 +42,20 @@ public class CourseSpringDataRepositoryTest {
 	public void findById_CourseNotPresent() {
 		Optional<Course> courseOptional = repository.findById(20001L);
 		assertFalse(courseOptional.isPresent());
+	}
+	
+	
+	@Test
+	@Transactional
+	public void findById_firstLevelCacheDemo() {
+		
+		List<Course> course = repository.findByName("Spring Boot in 1 Steps");
+		logger.info("First Course Retrieved {}", course);
+
+		List<Course> course1 = repository.findByName("Spring Boot in 1 Steps");
+		logger.info("First Course Retrieved again {}", course1);
+
+		assertEquals(1, course.size());
 	}
 
 	@Test

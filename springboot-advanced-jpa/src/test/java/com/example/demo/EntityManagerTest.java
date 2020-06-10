@@ -44,6 +44,10 @@ public class EntityManagerTest {
 		Student student = em.find(Student.class, 20001L);
 		logger.info("student -> {}", student);
 		logger.info("passport -> {}", student.getPassport());
+		
+		Student student1 = em.find(Student.class, 20001L);
+		logger.info("student -> {}", student);
+		logger.info("passport -> {}", student.getPassport());
 	}
 
 	@Test
