@@ -3,6 +3,7 @@ package com.example.demo.entities.course_entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -15,6 +16,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 @Entity
+@Cacheable
 public class Student {
 
 	@Id
@@ -35,7 +37,7 @@ public class Student {
 	 * passport as a getter, that will not be included
 	 */
 
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne
 	private Passport passport;
 
 	@ManyToMany

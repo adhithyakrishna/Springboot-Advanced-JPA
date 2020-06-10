@@ -39,6 +39,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * well as our repository it will get automatically mapped
  */
 //@Table(name = "CourseDetails")
+@Cacheable
 public class Course {
 
 	protected Course() {
